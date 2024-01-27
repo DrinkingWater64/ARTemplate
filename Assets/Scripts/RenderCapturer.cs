@@ -7,10 +7,7 @@ using System.IO;
 
 public class RenderCapturer : MonoBehaviour
 {
-    public RenderTexture RT;
     private RenderTexture rt;
-    public GameObject RenderCamera;
-    public RawImage RawImage;
     byte[] RawImageBytes;
     Camera _camera;
 

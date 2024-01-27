@@ -19,6 +19,5 @@ public class CapturePhoto : MonoBehaviour
 
         Debug.Log("Permission result: " + permission);
 
-        //Destroy(bytes);
     }
 }
