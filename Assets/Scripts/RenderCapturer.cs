@@ -8,25 +8,42 @@ using System.IO;
 public class RenderCapturer : MonoBehaviour
 {
     public RenderTexture RT;
+    private RenderTexture rt;
     public GameObject RenderCamera;
     public RawImage RawImage;
     byte[] RawImageBytes;
-    void getImage()
-    {
-        Texture2D texture = new Texture2D(RT.width, RT.height, TextureFormat.ARGB32, false);
-        RenderTexture.active = RT;
-        texture.ReadPixels(new Rect(0, 0, RT.width, RT.height), 0, 0);
+    Camera _camera;
 
-        RawImageBytes = texture.EncodeToPNG();
+    void getCameraImage()
+    {
+        var w = Screen.width;
+        var h = Screen.height;
+        _camera = Camera.main;
+        rt = new RenderTexture(w, h, 24);
+        _camera.targetTexture = rt;
+        
+        var currentRT = RenderTexture.active;
+        RenderTexture.active = rt;
+
+        _camera.Render();
+
+        Texture2D image = new Texture2D(w,h, TextureFormat.ARGB32, false);
+        image.ReadPixels(new Rect(0, 0, w, h), 0, 0);
+        image.Apply();
+
+        _camera.targetTexture = null;
+
+        RenderTexture.active = currentRT;
+        RawImageBytes = image.EncodeToPNG();
+        Destroy( rt );
+        Destroy( image );
     }
 
     IEnumerator RenderProcess()
     {
-        RenderCamera.SetActive(true);
         yield return new WaitForSeconds(.01f);
-        getImage();
+        getCameraImage();
         yield return new WaitForSeconds(.1f);
-        RenderCamera.SetActive(false);
 
     }
 
