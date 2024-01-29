@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ImageSave.unity
     guid: 4b3aea5214cf1cf479861d7ca8cf34f1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene 1.unity
     guid: cb442334eeff7cd48900535a6f015e4b
+  - enabled: 1
+    path: Assets/Scenes/SimpleUI.unity
+    guid: 7b172c2618904ef4993465867e20b505
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
