@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae467d43397949c42905968b41fd120d, type: 3}
-  m_Name: Cube
+  m_Name: Donut
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2668992677333385299, guid: bfe01f5ea20180d488996997238845f5, type: 3}
-  icon: {fileID: 21300000, guid: 0d77f64dcf23ba448b2a63ad6f4c50c2, type: 3}
+  prefab: {fileID: 5923104921834008719, guid: 8ae99c55d89c449b4be74f60dc81e02b, type: 3}
+  icon: {fileID: 21300000, guid: cc39c192440c8432582befdd623cb4db, type: 3}

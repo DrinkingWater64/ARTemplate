@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class SpawnObject : MonoBehaviour
 {
-    [SerializeField] GameObject spawnObject;
-    [SerializeField] float distance = 4f;
-
+    public SpawnManager spawnManager;
+    public int index;
     public void SpawnObjectInFront()
     {
-        Camera cam = Camera.main;
-        Vector3 newLoc = cam.transform.position + cam.transform.forward*distance;
-        GameObject spawnedObj = Instantiate(spawnObject, newLoc, Quaternion.identity);
-        
+        spawnManager.SpawnObjectInFrontOfCamera(index);
     }
 }
