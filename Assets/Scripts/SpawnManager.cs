@@ -7,7 +7,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
 
-    [SerializeField] float distanceFromCamera = 4f;
+    [SerializeField] float distanceFromCamera = 1f;
     public List<SpawnableObjs> spawnables;
     private GameObject[] _spawnedObjects;
     
@@ -27,7 +27,7 @@ public class SpawnManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Already Spawned");
+            DespawnObjects();
         }
 
     }

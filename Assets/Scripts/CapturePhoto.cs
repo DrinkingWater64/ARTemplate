@@ -13,7 +13,7 @@ public class CapturePhoto : MonoBehaviour
 
     private IEnumerator TakeScreenshotAndSave()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(.1f);
         byte[] bytes = capturer.GetScreenCaptureImage();
         NativeGallery.Permission permission = NativeGallery.SaveImageToGallery(bytes, "GalleryTest", "Image.png", (success, path) => Debug.Log("Media save result: " + success + " " + path));
 
