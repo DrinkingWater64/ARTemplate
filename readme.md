@@ -3,6 +3,8 @@ An AR template application by Unity, where you can place a object and take a pic
 
 ## Third Party Packages
 **Native Gallery for Android & iOS**
+
+
 By default, Unity does not save pictures in gallery for both android and IOS. This plug in handles all the permissions required and save images directly in the Gallery instead of the AppData directory. This plugin also provides functionalities for making albums and naming options.  
 [Native Gallery for Android & iOS | Integration | Unity Asset Store](https://assetstore.unity.com/packages/tools/integration/native-gallery-for-android-ios-112630)
 [Documentation](https://github.com/yasirkula/UnityNativeGallery)
