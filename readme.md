@@ -12,6 +12,8 @@ Download the latest release or clone the repository and build the application.
 ## How to
 For full example refer to SampleUI scene.
 
-**a. Add a new object**
+**a. Add a new object :**
+
+
 Right click in the asset browser `Create -> ScriptableObjects -> PrefabIconData`. In the new created object. Put the game object you want to spawn in `Prefab` field and the corresponding Icon in the `Icon` field. 
 Have a empty game object which will be the spawn manager. Attach the script `SpawnManager.cs` in this game object or use the `ObjectSpawnerManager` prefab. This will handle all the spawning functionalities.  In the script, add the new scriptable object you made to list of SpawnManager.
