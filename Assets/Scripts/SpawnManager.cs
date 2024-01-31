@@ -16,6 +16,11 @@ public class SpawnManager : MonoBehaviour
         _spawnedObjects = new GameObject[spawnables.Count];
     }
 
+
+    /// <summary>
+    /// Spawn an object in front of the main camera based on the specified index.
+    /// </summary>
+    /// <param name="index">The index of the object to spawn.</param>
     public void SpawnObjectInFrontOfCamera(int index)
     {
         if (_spawnedObjects[index] == null)
@@ -32,6 +37,9 @@ public class SpawnManager : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Despawn all currently spawned objects.
+    /// </summary>
     public void DespawnObjects()
     {
         foreach (GameObject spawnedObject in _spawnedObjects) {
